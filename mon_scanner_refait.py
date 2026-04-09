@@ -10,13 +10,16 @@ socket.getaddrinfo()
 '''
 #with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0, None) as s:
 host = " "
-port = 1024 
+port = 443 
+r = range(1, 1024)
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 print("Entrez l'adresse ip que vous souhaitez scanner : ")
-ip = input(">")
+host = input(">")
 
-s.connect((host,port))
-s.recv(s.connect)
+s.connect_ex((host, port))
+'''s.recv(s.connect)
+'''
+print(f"le port {r} est ouvert")
